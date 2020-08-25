@@ -71,38 +71,6 @@ class CustomText(models.Model):
 
 class HomePage(models.Model):
     body = models.TextField()
-    key1 = models.ForeignKey(
-        "users.User",
-        null=True,
-        blank=True,
-        default=1,
-        on_delete=models.SET_DEFAULT,
-        related_name="homepage_key1",
-    )
-    key2 = models.ForeignKey(
-        "home.CustomText",
-        null=True,
-        blank=True,
-        default=2,
-        on_delete=models.SET_DEFAULT,
-        related_name="homepage_key2",
-    )
-    key3 = models.OneToOneField(
-        "users.User",
-        null=True,
-        blank=True,
-        default=1,
-        on_delete=models.SET_DEFAULT,
-        related_name="homepage_key3",
-    )
-    key4 = models.OneToOneField(
-        "users.User",
-        null=True,
-        blank=True,
-        default=4,
-        on_delete=models.SET_DEFAULT,
-        related_name="homepage_key4",
-    )
 
     @property
     def api(self):
